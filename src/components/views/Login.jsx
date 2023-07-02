@@ -31,7 +31,11 @@ function Login() {
         <Col sm="10">
           <Form.Control type="email" placeholder='Ingrese un correo' {
              ...register('email', {
-                required: 'El email es obligatorio'
+                required: 'El email es obligatorio',
+                pattern:{
+                  value: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/,
+                  message: 'El email debe contener @ y terminar . com/es/com.ar u otra terminacion'
+                }
              })
           }/>
           <Form.Text className='text-danger'>
@@ -47,7 +51,11 @@ function Login() {
         <Col sm="10">
           <Form.Control type="password" placeholder="Password" {
             ...register('password', {
-                required: 'La contraseña es obligatoria'
+                required: 'La contraseña es obligatoria',
+                pattern:{
+                  value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
+                  message: 'El password debe contener 8 caracteres (al menos 1 letra mayúscula, 1 letra minúscula y 1 numero) también puede incluir carácteres especiales'
+                }
             })
           } />
          <Form.Text className='text-danger'>
