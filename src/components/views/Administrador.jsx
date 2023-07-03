@@ -1,7 +1,8 @@
-import { Button, Table } from "react-bootstrap";
+import {  Table } from "react-bootstrap";
 import ItemProducto from "./producto/ItemProducto";
 import { useEffect, useState } from "react";
 import { obtenerProductos } from "../helpers/queries";
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
 
@@ -18,7 +19,12 @@ const Administrador = () => {
     <section className="container mainSection">
       <div className="d-flex justiify-content-between  mt-5">
         <h1 className="display-4">Productos disponibles</h1>
-        <Button className="btn btn-primary " to='/administrar/crear'> Agregar</Button>
+
+        <Link className="btn btn-primary " to='/administrador/crear'> 
+        
+        Agregar 
+        
+        </Link>
 
       </div>
       <hr />
@@ -42,7 +48,7 @@ const Administrador = () => {
 
       </Table>
     </section>
-  )
+   )
 };
 
-export default Administrador;
+export default Administrador

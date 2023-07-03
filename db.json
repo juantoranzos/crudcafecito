@@ -7,6 +7,20 @@
       "categoria": "bebida caliente",
       "descripcion": "alguna descripcion",
       "imagen": "linkimagen"
+    },
+    {
+      "categoria": "bebida fria",
+      "imagen": "https://i.ytimg.com/vi/Ys6Q5ejMmNI/maxresdefault.jpg",
+      "nombreProducto": "medialuna",
+      "precio": "300",
+      "id": 2
+    },
+    {
+      "nombreProducto": "pan",
+      "precio": "100",
+      "imagen": "https://i.ytimg.com/vi/Ys6Q5ejMmNI/maxresdefault.jpg",
+      "categoria": "salado",
+      "id": 3
     }
   ],
   "usuarios": [
