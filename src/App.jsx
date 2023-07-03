@@ -4,6 +4,7 @@ import Menu from "./components/common/Menu"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Inicio from './components/views/Inicio';
 import Login from './components/views/Login';
+import DetalleProducto from './components/views/DetalleProducto'
 import Error404 from './components/views/Error404';
 import CrearProducto from './components/views/producto/CrearProducto';
 import Administrador from './components/views/Administrador';
@@ -23,6 +24,7 @@ function App() {
        <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado} ></Menu>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>} />
+          <Route exact path="/detalle" element={<DetalleProducto></DetalleProducto>} />
           <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado} ></Login>} />
          <Route path='/administrador/*' element={
           <RutasProtegidas>

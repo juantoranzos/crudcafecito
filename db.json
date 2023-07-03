@@ -16,11 +16,18 @@
       "id": 2
     },
     {
-      "nombreProducto": "pan",
-      "precio": "100",
-      "imagen": "https://i.ytimg.com/vi/Ys6Q5ejMmNI/maxresdefault.jpg",
-      "categoria": "salado",
+      "categoria": "dulce",
+      "imagen": "link img",
+      "nombreProducto": "medialuna con jyq",
+      "precio": 300,
       "id": 3
+    },
+    {
+      "nombreProducto": "brownie nuevo",
+      "precio": "600",
+      "imagen": "https://i.ytimg.com/vi/Ys6Q5ejMmNI/maxresdefault.jpg",
+      "categoria": "dulce",
+      "id": 4
     }
   ],
   "usuarios": [
