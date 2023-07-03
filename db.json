@@ -23,6 +23,14 @@
         "categoria": "dulce",
         "descripcion": "alguna descripcion",
         "imagen": "linkimagen"
+      },
+      {
+        "id": 4,
+        "nombreProducto": "medialuna222",
+        "precio": 150,
+        "categoria": "dulce",
+        "descripcion": "alguna descripcion",
+        "imagen": "linkimagen"
       }
     ],
     "usuarios": [
