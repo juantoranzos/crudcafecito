@@ -7,22 +7,6 @@
       "categoria": "bebida caliente",
       "descripcion": "alguna descripcion",
       "imagen": "linkimagen"
-    },
-    {
-      "id": 2,
-      "nombreProducto": "té",
-      "precio": 100,
-      "categoria": "bebida caliente",
-      "descripcion": "alguna descripcion",
-      "imagen": "linkimagen"
-    },
-    {
-      "id": 3,
-      "nombreProducto": "medialuna",
-      "precio": 150,
-      "categoria": "dulce",
-      "descripcion": "alguna descripcion",
-      "imagen": "linkimagen"
     }
   ],
   "usuarios": [

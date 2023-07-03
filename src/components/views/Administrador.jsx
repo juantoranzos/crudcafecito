@@ -16,9 +16,9 @@ const Administrador = () => {
   // Contenido del componente Administrador
   return(
     <section className="container mainSection">
-      <div className="d-flex justiify-content-between aling-items-center mt-5">
+      <div className="d-flex justiify-content-between  mt-5">
         <h1 className="display-4">Productos disponibles</h1>
-        <Button className="btn btn-primary" to='/administrar/crear'> Agregar</Button>
+        <Button className="btn btn-primary " to='/administrar/crear'> Agregar</Button>
 
       </div>
       <hr />
@@ -35,7 +35,7 @@ const Administrador = () => {
           </thead>
           <tbody>
             {
-              productos.map((producto)=>  <ItemProducto key={producto.id} producto={producto}></ItemProducto>
+              productos.map((producto)=>  <ItemProducto key={producto.id} producto={producto} setProductos={setProductos}></ItemProducto>
               )
             }
           </tbody>
