@@ -10,6 +10,8 @@ import Administrador from './components/views/Administrador';
 import Footer from './components/common/Footer';
 import Registro from './components/views/Registro';
 import { useState } from 'react';
+import RutasProtegidas from './components/routes/RutasProtegidas';
+import RutasAdministrador from './components/routes/RutasAdministrador';
 
 
 function App() {
@@ -22,8 +24,11 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>} />
           <Route exact path="/login" element={<Login setUsuarioLogueado={setUsuarioLogueado} ></Login>} />
-          <Route exact path="/administrador" element={<Administrador></Administrador>} />
-          <Route exact path="/administrador/crear" element={<CrearProducto></CrearProducto>} />
+         <Route path='/administrador/*' element={
+          <RutasProtegidas>
+            <RutasAdministrador></RutasAdministrador>
+          </RutasProtegidas>
+         }></Route>
           <Route exact path="/registro" element={<Registro></Registro>} />
           <Route exact path="*" element={<Error404></Error404>} />
         </Routes>
