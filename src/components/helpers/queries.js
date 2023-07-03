@@ -1,5 +1,13 @@
 //llamar la variable de entorno 
-const URL_USUARIO = import.meta.env.VITE_API_USUARIO
+const URL_USUARIO = import.meta.env.VITE_API_USUARIO;
+const URL_PRODUCTO = import.meta.env.VITE_API_PRODUCTO;
+/*
+peticiones GET obtener un listado de elementos o un elemento
+peticiones post crear un elemento
+peticiones put editar un elemento
+peticion delete que borra un elemento
+
+*/ 
 export const login = async (usuario) =>{
  console.log(usuario);
  try{
@@ -27,4 +35,70 @@ export const login = async (usuario) =>{
     console.log(error)
     return null;
  }
+}
+
+export const obtenerProductos = async ()=>{
+   try{
+    const respuesta = await fetch (URL_PRODUCTO);
+    const listaProductos = await respuesta.json();
+    return listaProductos;
+   }catch(error){
+      console.log(error)
+
+   }
+}
+export const eliminarProducto = async (id)=>{
+   try{
+ const respuesta = await fetch(`${URL_PRODUCTO}/${id}`, {
+   method: "DELETE"
+ });
+ return respuesta;
+   }catch(error){
+      console.log(error)
+   }
+
+}
+export const crearProducto = async (producto)=>{
+   try{
+ const respuesta = await fetch(URL_PRODUCTO, {
+   method: "POST",
+   headers:{
+      "Content-Type": "application/json"
+   },
+   body: JSON.stringify(producto)
+ });
+ return respuesta;
+   }catch(error){
+      console.log(error)
+   }
+
+}
+
+
+
+export const obtenerProducto = async (id)=>{
+   try{
+    const respuesta = await fetch (`${URL_PRODUCTO}/${id}`);
+    const productoEditar= await respuesta.json();
+    return productoEditar;
+   }catch(error){
+      console.log(error)
+
+   }
+}
+export const consultaEditarProducto = async (producto, id)=>{
+   try{
+      console.log(producto)
+ const respuesta = await fetch(URL_PRODUCTO+'/'+id, {
+   method: "PUT",
+   headers:{
+      "Content-Type": "application/json"
+   },
+   body: JSON.stringify(producto)
+ });
+ return respuesta;
+   }catch(error){
+      console.log(error)
+   }
+
 }
